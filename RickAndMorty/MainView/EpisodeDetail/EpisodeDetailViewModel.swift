@@ -15,7 +15,7 @@ class EpisodeDetailViewModel: ObservableObject {
         getCharNamesInThisEpisode(episode: episode)
     }
     
-    func getCharNamesInThisEpisode(episode: EpisodeResult) -> [Character] {
+    func getCharNamesInThisEpisode(episode: EpisodeResult) {
         for char in episode.characters! {
             service.fetchOnlyCharRequest(url: char) { [weak self] response in
                 switch response {
@@ -26,7 +26,6 @@ class EpisodeDetailViewModel: ObservableObject {
                 }
             }
         }
-        return chars
     }
 
 }
