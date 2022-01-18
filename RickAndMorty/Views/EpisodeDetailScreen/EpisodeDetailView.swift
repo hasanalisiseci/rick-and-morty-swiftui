@@ -61,11 +61,10 @@ struct EpisodeDetailView: View {
                                 .frame(width: 150, height: 50)
                             Text(character.name ?? "")
                                 .foregroundColor(Color.white)
-                                .padding(.bottom, 10)
+                                .padding(10)
                         }
                     }
                 }
-
                     .onAppear() {
                     charactersThisEpisode.initialize(episode: episode!)
                 }

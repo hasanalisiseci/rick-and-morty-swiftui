@@ -105,11 +105,11 @@
 		744F662A2794AA2B007A4336 /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				74E45E292796CAC6005F986B /* Assets */,
 				7467997927955FC000D84A6A /* App */,
 				74E45E232796C011005F986B /* Views */,
 				744F66442794C648007A4336 /* Network */,
 				74E264DC2795A0AB0042CCB0 /* Utils */,
-				744F662F2794AA2D007A4336 /* Assets.xcassets */,
 				744F66312794AA2D007A4336 /* Preview Content */,
 			);
 			path = RickAndMorty;
@@ -266,6 +266,14 @@
 				74E45E272796C07D005F986B /* LocationDetailViewModel.swift */,
 			);
 			path = LocationDetailScreen;
+			sourceTree = "<group>";
+		};
+		74E45E292796CAC6005F986B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				744F662F2794AA2D007A4336 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
