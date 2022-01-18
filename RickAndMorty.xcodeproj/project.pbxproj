@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7430143427976E8400B5FEFF /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7430143327976E8400B5FEFF /* View+Extension.swift */; };
+		743014362797734B00B5FEFF /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743014352797734B00B5FEFF /* PopupView.swift */; };
 		744F662C2794AA2B007A4336 /* RickAndMortyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F662B2794AA2B007A4336 /* RickAndMortyApp.swift */; };
 		744F662E2794AA2B007A4336 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F662D2794AA2B007A4336 /* ContentView.swift */; };
 		744F66302794AA2D007A4336 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 744F662F2794AA2D007A4336 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7430143327976E8400B5FEFF /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		743014352797734B00B5FEFF /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		744F66282794AA2B007A4336 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		744F662B2794AA2B007A4336 /* RickAndMortyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyApp.swift; sourceTree = "<group>"; };
 		744F662D2794AA2B007A4336 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -187,11 +191,29 @@
 			isa = PBXGroup;
 			children = (
 				7467997A27955FD800D84A6A /* MainView.swift */,
+				74CF389827975AAF000B526D /* TabBar Screen */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		74CF389827975AAF000B526D /* TabBar Screen */ = {
+			isa = PBXGroup;
+			children = (
 				74E45E1C2796B54D005F986B /* CharactersScreen */,
 				7453FC7727957BEF00ED9BB6 /* EpisodesScreen */,
 				7453FC81279582AE00ED9BB6 /* LocationsScreen */,
 			);
-			path = MainView;
+			path = "TabBar Screen";
+			sourceTree = "<group>";
+		};
+		74CF389927975AC0000B526D /* Detail Screen */ = {
+			isa = PBXGroup;
+			children = (
+				743014352797734B00B5FEFF /* PopupView.swift */,
+				7453FC7C2795816A00ED9BB6 /* EpisodeDetailScreen */,
+				74E45E242796C038005F986B /* LocationDetailScreen */,
+			);
+			path = "Detail Screen";
 			sourceTree = "<group>";
 		};
 		74E264DC2795A0AB0042CCB0 /* Utils */ = {
@@ -207,6 +229,7 @@
 			children = (
 				7453FC7A27957ECA00ED9BB6 /* Double+Extension.swift */,
 				7453FC8A2795966600ED9BB6 /* String+Extension.swift */,
+				7430143327976E8400B5FEFF /* View+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -253,8 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				7467997C2795600B00D84A6A /* MainView */,
-				7453FC7C2795816A00ED9BB6 /* EpisodeDetailScreen */,
-				74E45E242796C038005F986B /* LocationDetailScreen */,
+				74CF389927975AC0000B526D /* Detail Screen */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -365,6 +387,7 @@
 				7453FC83279582C400ED9BB6 /* LocationViewModel.swift in Sources */,
 				74E45E082796ADBD005F986B /* Character.swift in Sources */,
 				744F663E2794AB15007A4336 /* Service.swift in Sources */,
+				7430143427976E8400B5FEFF /* View+Extension.swift in Sources */,
 				7453FC7527957A5700ED9BB6 /* EpisodeViewModel.swift in Sources */,
 				74E45E212796B553005F986B /* CharCellView.swift in Sources */,
 				74E45E0A2796ADEE005F986B /* Location.swift in Sources */,
@@ -372,6 +395,7 @@
 				744F663C2794AB07007A4336 /* RickAndMortyError.swift in Sources */,
 				7453FC6F2795784D00ED9BB6 /* EpisodesTabView.swift in Sources */,
 				7453FC802795819E00ED9BB6 /* EpisodeDetailViewModel.swift in Sources */,
+				743014362797734B00B5FEFF /* PopupView.swift in Sources */,
 				7453FC87279582E000ED9BB6 /* LocationCellView.swift in Sources */,
 				7453FC85279582D500ED9BB6 /* LocationTabView.swift in Sources */,
 				74E45E282796C07D005F986B /* LocationDetailViewModel.swift in Sources */,
