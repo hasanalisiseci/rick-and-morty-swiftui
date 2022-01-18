@@ -18,10 +18,12 @@ struct LocationTabView: View {
                     LazyVStack(spacing: 10) {
                         ForEach(locationViewModel.locationResponse) { location in
                             VStack {
-                                LocationCellView(location: location)
-                                    .background(Color.white)
-                                    .cornerRadius(8)
-                                    .padding(.horizontal)
+                                NavigationLink(destination: LocationDetailView(location: location)) {
+                                    LocationCellView(location: location)
+                                        .background(Color.white)
+                                        .cornerRadius(8)
+                                        .padding(.horizontal)
+                                }
                                 Divider()
                             }
                         }

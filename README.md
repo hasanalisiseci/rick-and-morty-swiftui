@@ -4,4 +4,5 @@
 
 ## Uygulama Görüntüleri
 
-![ScreenShots](./Images/rick-and-morty-swiftui.png)
+![ScreenShots1](./Images/rick-and-morty-swiftui-1.png)
+![ScreenShots2z](./Images/rick-and-morty-swiftui-2.png)
