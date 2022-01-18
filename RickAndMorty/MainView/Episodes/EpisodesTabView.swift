@@ -8,30 +8,30 @@
 import SwiftUI
 
 struct EpisodesTabView: View {
-    
+
     @ObservedObject var episodeViewModel = EpisodeViewModel()
-    
+
     var body: some View {
         NavigationView {
-                ScrollView {
-                    LazyVStack(spacing: 10) {
-                        ForEach(episodeViewModel.episodeResponse) { episode in
-                            VStack {
-                                NavigationLink(destination: EpisodeDetailView(episode: episode)) {
-                                    EpisodeCellView(episode: episode)
-                                        .background(Color.white)
-                                        .cornerRadius(8)
-                                        .padding(.horizontal)
-                                }
-                                Divider()
+            ScrollView {
+                LazyVStack(spacing: 10) {
+                    ForEach(episodeViewModel.episodeResponse) { episode in
+                        VStack {
+                            NavigationLink(destination: EpisodeDetailView(episode: episode)) {
+                                EpisodeCellView(episode: episode)
+                                    .background(Color.white)
+                                    .cornerRadius(8)
+                                    .padding(.horizontal)
                             }
+                            Divider()
                         }
                     }
                 }
-                    .onAppear() {
-                        episodeViewModel.initialize()
-                    }
-            .navigationTitle("Episodes")
+            }
+                .onAppear() {
+                episodeViewModel.initialize()
+            }
+                .navigationTitle("Episodes")
         }
     }
 }

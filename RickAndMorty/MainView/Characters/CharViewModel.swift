@@ -8,14 +8,6 @@
 import Foundation
 
 class CharViewModel: ObservableObject {
-    
-    enum ViewStatus {
-        case all
-        case alive
-        case dead
-        case unknown
-    }
-    
     let service = Service.shared
 
     @Published var rickAndMortyResponse = [Character]()
@@ -25,7 +17,7 @@ class CharViewModel: ObservableObject {
     }
 
     func fetchContent(filter: String) {
-        service.fetchCharRequest(filter: filter,apiType: Service.apiType.character) {  [weak self] response in
+        service.fetchCharactersRequest(filter: filter, endpointType: endpointType.character) { [weak self] response in
             switch response {
             case .success(let model):
                 guard let results = model.results else { return }

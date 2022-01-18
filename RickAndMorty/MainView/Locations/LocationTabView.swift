@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct LocationTabView: View {
-    
+
     @ObservedObject var locationViewModel = LocationViewModel()
-    
+
     var body: some View {
         NavigationView {
-            ZStack{
+            ZStack {
                 ScrollView {
                     LazyVStack(spacing: 10) {
                         ForEach(locationViewModel.locationResponse) { location in
@@ -28,10 +28,10 @@ struct LocationTabView: View {
                     }
                 }
                     .onAppear() {
-                        locationViewModel.initialize()
-                    }
+                    locationViewModel.initialize()
+                }
             }
-            .navigationTitle("Locations")
+                .navigationTitle("Locations")
         }
     }
 }

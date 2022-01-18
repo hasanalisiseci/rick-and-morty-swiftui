@@ -12,10 +12,10 @@ class EpisodeDetailViewModel: ObservableObject {
     @Published var chars = [Character]()
 
     func initialize(episode: EpisodeResult) {
-        getCharNamesInThisEpisode(episode: episode)
+        getCharactersInThisEpisode(episode: episode)
     }
-    
-    func getCharNamesInThisEpisode(episode: EpisodeResult) {
+
+    func getCharactersInThisEpisode(episode: EpisodeResult) {
         for char in episode.characters! {
             service.fetchOnlyCharRequest(url: char) { [weak self] response in
                 switch response {

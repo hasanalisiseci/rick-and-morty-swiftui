@@ -8,14 +8,14 @@
 import Foundation
 
 enum RickandMortyError: Error {
-    
+
     case decodingError
     case dataError
     case urlError
     case responseError
-    
+
     var localizedDescription: String {
-        
+
         switch self {
         case .decodingError:
             return "Decode edilemedi"

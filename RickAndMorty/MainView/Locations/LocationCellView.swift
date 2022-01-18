@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct LocationCellView: View {
-    
+
     var location: LocationResult?
-    
+
     var body: some View {
         VStack {
             HStack {
@@ -19,9 +19,9 @@ struct LocationCellView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .frame(width: 121, height: 121, alignment: .center)
                             .foregroundColor(Color.green)
-                              Text(location?.name?.prefix(1) ?? "E")
-                                .fontWeight(.bold)
-                                .font(.system(size: 60))
+                        Text(location?.name?.prefix(1) ?? "E")
+                            .fontWeight(.bold)
+                            .font(.system(size: 60))
                     }
                 }
                 HStack {

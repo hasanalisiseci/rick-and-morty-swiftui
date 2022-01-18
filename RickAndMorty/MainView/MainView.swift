@@ -8,25 +8,25 @@
 import SwiftUI
 
 struct MainView: View {
-    
-    
+
+
     var body: some View {
         TabView {
             CharactersTabView()
                 .tabItem {
-                    Image(systemName: "person.3")
-                    Text("Characters")
-                }
+                Image(systemName: "person.3")
+                Text("Characters")
+            }
             EpisodesTabView()
                 .tabItem {
-                    Image(systemName: "list.and.film")
-                    Text("Episodes")
-                }
+                Image(systemName: "list.and.film")
+                Text("Episodes")
+            }
             LocationTabView()
                 .tabItem {
-                    Image(systemName: "mappin.and.ellipse")
-                    Text("Locations")
-                }
+                Image(systemName: "mappin.and.ellipse")
+                Text("Locations")
+            }
         }
     }
 }
