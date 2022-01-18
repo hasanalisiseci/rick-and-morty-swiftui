@@ -103,7 +103,7 @@ class Service: ObservableObject {
     }
     
     //MARK: - Episode Request
-    func fetchEpisodeRequest(apiType: apiType, completion: @escaping (Result<EpisodesModel, RickandMortyError>) -> ()){
+    func fetchRequest<T:Decodable>(apiType: apiType, completion: @escaping (Result<T, RickandMortyError>) -> ()){
         
         let url = Service.baseURL + apiType.apiTypeString
         
@@ -125,40 +125,7 @@ class Service: ObservableObject {
             }
             
             do {
-                let response = try JSONDecoder().decode(EpisodesModel.self, from: data)
-                DispatchQueue.main.async {
-                    completion(.success(response))
-                }
-            }
-            catch{
-                completion(.failure(.decodingError))
-            }
-        }
-        task.resume()
-    }
-    
-    //MARK: - Location Request
-    func fetchLocationRequest(apiType: apiType, completion: @escaping (Result<LocationModel, RickandMortyError>) -> ()){
-        let url = Service.baseURL + apiType.apiTypeString
-        guard let requestURL = URL(string: url) else {
-            completion(.failure(.urlError))
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: requestURL) { data, resp, err in
-            
-            guard let httpResponse = resp as? HTTPURLResponse, 200..<300 ~= httpResponse.statusCode else {
-                completion(.failure(.responseError))
-                return
-            }
-            
-            guard let data = data else {
-                completion(.failure(.dataError))
-                return
-            }
-            
-            do {
-                let response = try JSONDecoder().decode(LocationModel.self, from: data)
+                let response = try JSONDecoder().decode(T.self, from: data)
                 DispatchQueue.main.async {
                     completion(.success(response))
                 }
